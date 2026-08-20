@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
 
       - name: Install mkdocs and dependencies
         run: |
@@ -20,7 +20,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@09d8f313dcc84179c9f28dbbbe1f06f3ca174008
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
