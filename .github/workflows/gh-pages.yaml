@@ -20,7 +20,7 @@ jobs:
         run: mkdocs build
 
       - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@09d8f313dcc84179c9f28dbbbe1f06f3ca174008
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
